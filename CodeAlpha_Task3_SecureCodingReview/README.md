@@ -10,6 +10,7 @@ A Python security review project developed as part of the CodeAlpha Cyber Securi
 - Test authentication behavior and document findings.
 
 # Project Structure
+```bash
 CodeAlpha_Task1_SecureCodingReview/
 ├── README.md
 ├── vulnerable_app.py
@@ -17,6 +18,7 @@ CodeAlpha_Task1_SecureCodingReview/
 ├── security_review.md
 ├── screenshots/
 └── reports/
+```
 
 # Requirements
 - Python 3.10 or later recommended.

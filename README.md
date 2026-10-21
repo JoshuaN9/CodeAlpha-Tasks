@@ -19,11 +19,13 @@ A Python source-code review demonstrating common authentication and database sec
 - Markdown
 
 # Repository Structure
+```bash
 CodeAlpha_Tasks/
 ├── CodeAlpha_Task1_NetworkSniffer/
 ├── CodeAlpha_Task2_PhishingAwareness/
 ├── CodeAlpha_Task3_SecureCodingReview/
 └── README.md
+```
 
 Each project folder contains its own documentation and supporting files.
 
