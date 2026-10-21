@@ -1,0 +1,25 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Local databases and credentials
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+
+# Captured network reports
+reports/*.csv
+*.pcap
+*.pcapng
+
+# Editor and operating system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+**/reports/*.csv

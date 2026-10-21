@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+
+# Local capture reports
+reports/*.csv
+
+# Editor files
+.vscode/
+.idea/
+
+# Operating system files
+Thumbs.db
+.DS_Store
