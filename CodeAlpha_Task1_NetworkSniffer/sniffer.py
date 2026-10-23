@@ -144,10 +144,10 @@ def main():
     output_path = (
         Path(args.output)
         if args.output
-        else REPORT_DIR / f"capture_{timestamp}.csv"
+        else REPORT_DIR / f"Report_{timestamp}.csv"
     )
 
-    print("CodeAlpha Basic Network Sniffer")
+    print("CodeAlpha NETWORK SNIFFER")
     print(f"Interface: {args.interface}")
     print(f"Protocol filter: {args.protocol}")
     print(f"Packet limit: {args.count}")
