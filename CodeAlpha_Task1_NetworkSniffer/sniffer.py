@@ -4,7 +4,7 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
-from scapy.all import sniff, IP, TCP, UDP, ICMP, Raw
+from scapy.all import sniff, IP, TCP, UDP, ICMP, DNS, DNSQR, Raw
 
 
 DEFAULT_INTERFACE = "Intel(R) Wireless-AC 9560 160MHz"
@@ -46,17 +46,21 @@ def parse_args():
 
     return args
 
-
 def get_protocol(packet):
+    if DNS in packet:
+        return "DNS", packet[UDP].sport if UDP in packet else packet[TCP].sport, \
+            packet[UDP].dport if UDP in packet else packet[TCP].dport
+
     if TCP in packet:
         return "TCP", packet[TCP].sport, packet[TCP].dport
+
     if UDP in packet:
         return "UDP", packet[UDP].sport, packet[UDP].dport
-    if DNS in packet:
-            return "DNS", packet[DNS].sport, packet[DNS].dport
+
     if ICMP in packet:
         return "ICMP", "", ""
-    return "ICMP", "", ""
+
+    return "OTHER", "", ""
 
 
 def analyze_packet(packet, rows, protocol_counts, totals):
